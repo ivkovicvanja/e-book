@@ -1,0 +1,92 @@
+.wrapper {
+  background: rgb(0, 12, 82);
+  background: linear-gradient(90deg, rgba(0, 12, 82, 1) 0%, rgba(34, 170, 255, 1) 100%);
+  opacity: 0.8;
+  width: 100vw;
+  height: 100vh;
+
+  header {
+    padding: 30px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    text-align: center;
+
+    .page-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .page-label {
+        color: azure;
+      }
+
+      .page {
+        display: flex;
+        font-size: 20px;
+        color: azure;
+
+        .button-previous {
+          &.hidden {
+            visibility: hidden;
+          }
+
+          margin: 20px;
+          align-self: center;
+
+          svg {
+            display: block;
+            font-size: xx-large;
+            &:hover {
+              cursor: pointer;
+              color: rgb(186, 199, 199);
+            }
+          }
+        }
+
+        .button-next {
+          &.hidden {
+            visibility: hidden;
+          }
+
+          margin: 20px;
+          align-self: center;
+
+          svg {
+            display: block;
+            font-size: xx-large;
+            &:hover {
+              cursor: pointer;
+              color: rgb(186, 199, 199);
+            }
+          }
+        }
+
+        .input-page {
+          margin: 20px;
+          align-self: center;
+
+          input {
+            max-width: 30px;
+            background-color: rgb(186, 199, 199);
+            color: azure;
+          }
+
+          input::-webkit-outer-spin-button,
+          input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+
+  section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+  }
+}

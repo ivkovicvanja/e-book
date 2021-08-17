@@ -1,0 +1,31 @@
+.numbers {
+    margin: 10px;
+    width: auto;
+    display: grid;
+    grid-template-rows: 100px 100px 100px;
+    grid-template-columns: 300px 300px 300px;
+
+    .number {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: azure;
+        font-size: 30px;
+      }
+}
+
+.description {
+    font-size: x-large;
+    color: azure;
+    margin: 10px
+}
+
+.hearing-icon {
+    margin: 20px;
+    color: rgb(199, 91, 115);
+
+    &:hover {
+        cursor: pointer;
+        color: rgb(114, 52, 65);
+    }
+}
