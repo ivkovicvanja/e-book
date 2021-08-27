@@ -8,7 +8,7 @@ function ContentPage({setPage}) {
             <p>САДРЖАЈ</p>
             <div className="button-group-content">
                 <button className="button-content" onClick={() => setPage(3)}>МАТЕМАТИКА</button>
-                <button className="button-content" onClick={() => setPage(5)}>ЛОГИКА</button>
+                <button className="button-content" onClick={() => setPage(17)}>ЛОГИКА</button>
             </div>
         </div>
       );

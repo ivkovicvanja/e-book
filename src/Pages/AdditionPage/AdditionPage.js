@@ -1,6 +1,6 @@
 import React from 'react';
 import './AdditionPage.scss';
-import HearingIcon from '@material-ui/icons/Hearing';
+import VolumeUpIcon from '@material-ui/icons/VolumeUp';
 
 import addition1 from '../../audio/sabiranje1.mp3';
 import addition2 from '../../audio/sabiranje2.mp3';
@@ -10,7 +10,7 @@ function AdditionPage() {
 
     const playSound = (audio) => { 
         new Audio(audio).play();
-      }
+    }
 
     return (
         <div>
@@ -18,13 +18,13 @@ function AdditionPage() {
               САБИРАЊЕ
             </p>
             <div className="description">
-                САБИРАЊЕ је једна од основних аритметичких операција. Сабирањем сазнајемо укупан број две или више величина (бројева). <span className="hearing-icon"><HearingIcon onClick={() => playSound(addition1)}/></span>
+                САБИРАЊЕ је једна од основних аритметичких операција. Сабирањем сазнајемо укупан број две или више величина (бројева). <span className="hearing-icon"><VolumeUpIcon onClick={() => playSound(addition1)}/></span>
             </div>
             <div className="description">
-                Математичку операцију сабирања представљамо знаком ПЛУС (+). <span className="hearing-icon"><HearingIcon onClick={() => playSound(addition2)}/></span>
+                Математичку операцију сабирања представљамо знаком ПЛУС (+). <span className="hearing-icon"><VolumeUpIcon onClick={() => playSound(addition2)}/></span>
             </div>
             <div className="description">
-                Бројеви које сабирамо називају се САБИРЦИ, а резултат сабирања назива се ЗБИР. <span className="hearing-icon"><HearingIcon onClick={() => playSound(addition3)}/></span>
+                Бројеви које сабирамо називају се САБИРЦИ, а резултат сабирања назива се ЗБИР. <span className="hearing-icon"><VolumeUpIcon onClick={() => playSound(addition3)}/></span>
             </div>
         </div>
       );

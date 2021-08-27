@@ -16,11 +16,15 @@ import AdditionExamplePage from './Pages/AdditionExamplePage/AdditionExamplePage
 import AdditionProblemOne from './Pages/AdditionProblemOne/AdditionProblemOne';
 import AdditionProblemTwo from './Pages/AdditionProblemTwo/AdditionProblemTwo';
 import SubtractionPage from './Pages/SubtractionPage/SubtractionPage';
+import SubtractionExamplePage from './Pages/SubtractionExamplePage/SubtractionExamplePage';
+import SubtractionProblemOne from './Pages/SubtractionProblemOne/SubtractionProblemOne';
+import SubtractionProblemTwo from './Pages/SubtractionProblemTwo/SubtractionProblemTwo';
+import SecondaryColorsPage from './Pages/SecondaryColorsPage/SecondaryColorsPage';
 
 function App() {
 
   const minPage = 1;
-  const maxPage = 15;
+  const maxPage = 20;
 
   const [page, setPage] = useState(1);
 
@@ -63,8 +67,20 @@ function App() {
         return <AdditionProblemTwo />
       case 13:
         return <SubtractionPage />
+      case 14:
+        return <SubtractionExamplePage />
       case 15:
+        return <SubtractionProblemOne />      
+      case 16:
+        return <SubtractionProblemTwo />
+      case 17:
         return <ColorsPage />
+      case 18:
+        return <SecondaryColorsPage />
+      case 19:
+        return <HomePage />
+      case 20:
+        return <HomePage />
       default:
         return <HomePage />;
     }

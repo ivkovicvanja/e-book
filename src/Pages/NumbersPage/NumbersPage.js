@@ -1,6 +1,6 @@
 import React from 'react';
 import './NumbersPage.scss';
-import HearingIcon from '@material-ui/icons/Hearing';
+import VolumeUpIcon from '@material-ui/icons/VolumeUp';
 
 import one from '../../audio/jedan.mp3';
 import two from '../../audio/dva.mp3';
@@ -25,15 +25,15 @@ function NumbersPage() {
               ЈЕДНОЦИФРЕНИ БРОЈЕВИ
             </p>
             <div className="numbers">
-            <div className="number">1 - ЈЕДАН <span className="hearing-icon"><HearingIcon onClick={() => playSound(one)}/></span></div>
-            <div className="number">2 - ДВА <span className="hearing-icon"><HearingIcon onClick={() => playSound(two)}/></span></div>
-            <div className="number">3 - ТРИ <span className="hearing-icon"><HearingIcon onClick={() => playSound(three)}/></span></div>
-            <div className="number">4 - ЧЕТИРИ <span className="hearing-icon"><HearingIcon onClick={() => playSound(four)}/></span></div>
-            <div className="number">5 - ПЕТ <span className="hearing-icon"><HearingIcon onClick={() => playSound(five)}/></span></div>
-            <div className="number">6 - ШЕСТ <span className="hearing-icon"><HearingIcon onClick={() => playSound(six)}/></span></div>
-            <div className="number">7 - СЕДАМ <span className="hearing-icon"><HearingIcon onClick={() => playSound(seven)}/></span></div>
-            <div className="number">8 - ОСАМ <span className="hearing-icon"><HearingIcon onClick={() => playSound(eight)}/></span></div>
-            <div className="number">9 - ДЕВЕТ <span className="hearing-icon"><HearingIcon onClick={() => playSound(nine)}/></span></div>
+            <div className="number">1 - ЈЕДАН <span className="hearing-icon"><VolumeUpIcon onClick={() => playSound(one)}/></span></div>
+            <div className="number">2 - ДВА <span className="hearing-icon"><VolumeUpIcon onClick={() => playSound(two)}/></span></div>
+            <div className="number">3 - ТРИ <span className="hearing-icon"><VolumeUpIcon onClick={() => playSound(three)}/></span></div>
+            <div className="number">4 - ЧЕТИРИ <span className="hearing-icon"><VolumeUpIcon onClick={() => playSound(four)}/></span></div>
+            <div className="number">5 - ПЕТ <span className="hearing-icon"><VolumeUpIcon onClick={() => playSound(five)}/></span></div>
+            <div className="number">6 - ШЕСТ <span className="hearing-icon"><VolumeUpIcon onClick={() => playSound(six)}/></span></div>
+            <div className="number">7 - СЕДАМ <span className="hearing-icon"><VolumeUpIcon onClick={() => playSound(seven)}/></span></div>
+            <div className="number">8 - ОСАМ <span className="hearing-icon"><VolumeUpIcon onClick={() => playSound(eight)}/></span></div>
+            <div className="number">9 - ДЕВЕТ <span className="hearing-icon"><VolumeUpIcon onClick={() => playSound(nine)}/></span></div>
             </div>
         </div>
       );

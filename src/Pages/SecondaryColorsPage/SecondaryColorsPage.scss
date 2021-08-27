@@ -33,27 +33,27 @@
         height: 150px;
         border: 1px solid azure;
 
-        &.yellow {
-            background-color: yellow;
+        &.orange {
+            background-color: orange;
             cursor: pointer;
             &:hover {
-                background-color: yellow;
+                background-color: orange;
             }
         }
 
-        &.red {
-            background-color: red;
+        &.green {
+            background-color: green;
             cursor: pointer;
             &:hover {
-                background-color: red;
+                background-color: green;
             }
         }
         
-        &.blue {
-            background-color: blue;
+        &.purple {
+            background-color: purple;
             cursor: pointer;
             &:hover {
-                background-color: blue;
+                background-color: purple;
             }
         }
       }

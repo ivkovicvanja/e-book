@@ -1,6 +1,6 @@
 import React from 'react';
 import './NumbersProblemTwo.scss';
-import HearingIcon from '@material-ui/icons/Hearing';
+import VolumeUpIcon from '@material-ui/icons/VolumeUp';
 
 import description from '../../audio/brojevi_zadatak2.mp3';
 import correct from '../../audio/tacno.mp3';
@@ -18,7 +18,7 @@ function NumbersProblemTwo() {
               БРОЈЕВИ - ЗАДАТАК 2
             </p>
             <div className="description">
-              КОЈИ БРОЈ ЈЕ ПРЕТХОДНИК БРОЈА 4? <span className="hearing-icon"><HearingIcon onClick={() => playSound(description)}/></span>
+              КОЈИ БРОЈ ЈЕ ПРЕТХОДНИК БРОЈА 4? <span className="hearing-icon"><VolumeUpIcon onClick={() => playSound(description)}/></span>
             </div>
             <div className="answers">
             <div className="answer correct" onClick={() => playSound(correct)}>3</div>
