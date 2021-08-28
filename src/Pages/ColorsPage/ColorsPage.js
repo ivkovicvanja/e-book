@@ -22,7 +22,7 @@ function ColorsPage() {
             <div className="description">
                 ОСНОВНЕ боје су ЖУТА, ЦРВЕНА и ПЛАВА. Оне се не могу разложити, нити добити мешањем других боја. Зову се још и ПРИМАРНЕ боје. <span className="hearing-icon"><VolumeUpIcon onClick={() => playSound(description1)}/></span>
             </div>
-            <div className="answers">
+            <div className="answers-colors">
               <div className="answer yellow" onClick={() => playSound(yellow)}>ЖУТА</div>
               <div className="answer red" onClick={() => playSound(red)}>ЦРВЕНА</div>
               <div className="answer blue" onClick={() => playSound(blue)}>ПЛАВА</div>

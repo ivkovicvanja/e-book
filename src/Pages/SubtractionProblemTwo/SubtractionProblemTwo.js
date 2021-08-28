@@ -20,7 +20,7 @@ function SubtractionProblemTwo() {
             <div className="description">
               АКО ОД БРОЈА 8 ОДУЗМЕМО СЛЕДБЕНИК БРОЈА 5, КОЈИ БРОЈ ЋЕМО ДОБИТИ? <span className="hearing-icon"><VolumeUpIcon onClick={() => playSound(description)}/></span>
             </div>
-            <div className="answers">
+            <div className="answers-subtraction">
             <div className="answer incorrect" onClick={() => playSound(incorrect)}>7</div>
             <div className="answer incorrect" onClick={() => playSound(incorrect)}>4</div>
             <div className="answer correct" onClick={() => playSound(correct)}>2</div>

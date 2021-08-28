@@ -20,7 +20,7 @@ function NumbersProblemOne() {
             <div className="description">
               КОЈИ ОД ПОНУЂЕНИХ БРОЈЕВА ЈЕ НАЈВЕЋИ? <span className="hearing-icon"><VolumeUpIcon onClick={() => playSound(description)}/></span>
             </div>
-            <div className="answers">
+            <div className="answers-numbers">
               <div className="answer incorrect" onClick={() => playSound(incorrect)}>8</div>
               <div className="answer correct" onClick={() => playSound(correct)}>9</div>
               <div className="answer incorrect" onClick={() => playSound(incorrect)}>3</div>

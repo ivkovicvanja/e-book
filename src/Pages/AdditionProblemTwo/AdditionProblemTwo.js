@@ -20,7 +20,7 @@ function AdditionProblemTwo() {
             <div className="description">
               ЗБИР КОЈЕГ ОД ПОНУЂЕНИХ ИЗРАЗА САБИРАЊА ОДГОВАРА ЗБИРУ БРОЈЕВА 3 И 4? <span className="hearing-icon"><VolumeUpIcon onClick={() => playSound(description)}/></span>
             </div>
-            <div className="answers">
+            <div className="answers-addition">
             <div className="answer incorrect" onClick={() => playSound(incorrect)}>2 + 3</div>
             <div className="answer incorrect" onClick={() => playSound(incorrect)}>3 + 5</div>
             <div className="answer correct" onClick={() => playSound(correct)}>6 + 1</div>

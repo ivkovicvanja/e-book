@@ -20,7 +20,7 @@ function NumbersProblemTwo() {
             <div className="description">
               КОЈИ БРОЈ ЈЕ ПРЕТХОДНИК БРОЈА 4? <span className="hearing-icon"><VolumeUpIcon onClick={() => playSound(description)}/></span>
             </div>
-            <div className="answers">
+            <div className="answers-numbers">
             <div className="answer correct" onClick={() => playSound(correct)}>3</div>
             <div className="answer incorrect" onClick={() => playSound(incorrect)}>6</div>
             <div className="answer incorrect" onClick={() => playSound(incorrect)}>5</div>

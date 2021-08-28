@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './App.scss';
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
+import MenuBookIcon from '@material-ui/icons/MenuBook';
 import HomePage from './Pages/HomePage/HomePage';
 import ContentPage from './Pages/ContentPage/ContentPage';
 import NumbersPage from './Pages/NumbersPage/NumbersPage';
@@ -20,11 +21,13 @@ import SubtractionExamplePage from './Pages/SubtractionExamplePage/SubtractionEx
 import SubtractionProblemOne from './Pages/SubtractionProblemOne/SubtractionProblemOne';
 import SubtractionProblemTwo from './Pages/SubtractionProblemTwo/SubtractionProblemTwo';
 import SecondaryColorsPage from './Pages/SecondaryColorsPage/SecondaryColorsPage';
+import GeometricShapes from './Pages/GeometricShapes/GeometricShapes';
+import LogicProblemOne from './Pages/LogicProblemOne/LogicProblemOne';
 
 function App() {
 
   const minPage = 1;
-  const maxPage = 20;
+  const maxPage = 21;
 
   const [page, setPage] = useState(1);
 
@@ -78,8 +81,10 @@ function App() {
       case 18:
         return <SecondaryColorsPage />
       case 19:
-        return <HomePage />
+        return <GeometricShapes />
       case 20:
+        return <LogicProblemOne />
+      case 21:
         return <HomePage />
       default:
         return <HomePage />;
@@ -95,6 +100,34 @@ function App() {
     <div className="wrapper">
 
       <header>
+
+        <div className="navbar">
+          <div className="dropdown">
+            <MenuBookIcon />
+            <div className="dropdown-content">
+              <span onClick={() => setPage(1)}>Почетна страна</span>
+              <span onClick={() => setPage(2)}>Садржај</span>
+              <span onClick={() => setPage(3)}>Бројеви</span>
+              <span onClick={() => setPage(4)}>Једноцифрени бројеви</span>
+              <span onClick={() => setPage(5)}>Бројеви - задатак 1</span>
+              <span onClick={() => setPage(6)}>Бројеви - Претходник и следбеник</span>
+              <span onClick={() => setPage(7)}>Бројеви - задатак 2</span>
+              <span onClick={() => setPage(8)}>Бројеви - задатак 3</span>
+              <span onClick={() => setPage(9)}>Сабирање</span>
+              <span onClick={() => setPage(10)}>Сабирање - пример</span>
+              <span onClick={() => setPage(11)}>Сабирање - задатак 1</span>
+              <span onClick={() => setPage(12)}>Сабирање - задатак 2</span>
+              <span onClick={() => setPage(13)}>Одузимање</span>
+              <span onClick={() => setPage(14)}>Одузимање - пример</span>
+              <span onClick={() => setPage(15)}>Одузимање - задатак 1</span>
+              <span onClick={() => setPage(16)}>Одузимање - задатак 2</span>
+              <span onClick={() => setPage(17)}>Боје - основне боје</span>
+              <span onClick={() => setPage(18)}>Боје - изведене боје</span>
+              <span onClick={() => setPage(19)}>Геометријски облици</span>
+              <span onClick={() => setPage(20)}>Логика - задатак</span>
+            </div>
+          </div>
+        </div>
 
         <div className="page-section">
           <div className="page-label">СТРАНА</div>

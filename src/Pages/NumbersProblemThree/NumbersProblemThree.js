@@ -20,7 +20,7 @@ function NumbersProblemThree() {
             <div className="description">
               КОЈИ БРОЈ СЕ НАЛАЗИ ИЗМЕЂУ БРОЈЕВА 5 и 7? <span className="hearing-icon"><VolumeUpIcon onClick={() => playSound(description)}/></span>
             </div>
-            <div className="answers">
+            <div className="answers-numbers">
             <div className="answer incorrect" onClick={() => playSound(incorrect)}>9</div>
             <div className="answer incorrect" onClick={() => playSound(incorrect)}>8</div>
             <div className="answer correct" onClick={() => playSound(correct)}>6</div>

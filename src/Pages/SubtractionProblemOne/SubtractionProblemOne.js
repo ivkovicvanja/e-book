@@ -20,7 +20,7 @@ function SubtractionProblemOne() {
             <div className="description">
               ВЛАДАН ИМА 6 ГОДИНА. УРОШ ЈЕ 3 ГОДИНЕ МЛАЂИ ОД ВЛАДАНА. КОЛИКО ГОДИНА ИМА УРОШ? <span className="hearing-icon"><VolumeUpIcon onClick={() => playSound(description)}/></span>
             </div>
-            <div className="answers">
+            <div className="answers-subtraction">
             <div className="answer correct" onClick={() => playSound(correct)}>3</div>
             <div className="answer incorrect" onClick={() => playSound(incorrect)}>2</div>
             <div className="answer incorrect" onClick={() => playSound(incorrect)}>4</div>

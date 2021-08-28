@@ -21,7 +21,7 @@ function SecondaryColorsPage() {
       <div className="description">
         Мешањем основних боја добијамо ИЗВЕДЕНЕ (секундарне) боје и то су НАРАНЏАСТА, ЗЕЛЕНА и ЉУБИЧАСТА. <span className="hearing-icon"><VolumeUpIcon onClick={() => playSound(description1)} /></span>
       </div>
-      <div className="answers">
+      <div className="answers-colors">
         <div className="answer orange" onClick={() => playSound(orange)}>НАРАНЏАСТА</div>
         <div className="answer green" onClick={() => playSound(green)}>ЗЕЛЕНА</div>
         <div className="answer purple" onClick={() => playSound(purple)}>ЉУБИЧАСТА</div>
