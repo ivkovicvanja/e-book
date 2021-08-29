@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './MemoryGame.scss';
+import correct from '../../audio/tacno.mp3'
 
 const Card = props => {
     let style = {};
@@ -17,7 +18,7 @@ const CardGrid = props => {
             click={() => props.handleClick(card.id)}
         />
     ));
-    return <div className="cards-block">{cards}</div>;
+    return <div className="cards">{cards}</div>;
 };
 
 const Newgame = props => {
@@ -57,8 +58,17 @@ class MemoryGame extends Component {
             { id: 14, cardState: CardState.HIDING, backgroundColor: "lightskyblue" },
             { id: 15, cardState: CardState.HIDING, backgroundColor: "lightskyblue" }
         ];
+
         cards = this.shuffle(cards);
-        this.state = { cards, secondClick: false };
+
+        this.state = { 
+            cards, 
+            secondClick: false 
+        };
+    }
+
+    playSound = (audio) => { 
+        new Audio(audio).play();
     }
 
     shuffle = arr => arr.sort(() => 0.5 - Math.random());
@@ -75,14 +85,15 @@ class MemoryGame extends Component {
     handleClick = id => {
         const showingCards = this.state.cards.map(card => {
             if (card.id === id) {
-                return { ...card, cardState: 1 };
+                return { ...card, cardState: CardState.SHOWING };
             }
             return card;
         });
+
         const { secondClick } = this.state;
 
         const showingCardsIds = showingCards
-            .filter(card => card.cardState === 1)
+            .filter(card => card.cardState === CardState.SHOWING)
             .map(card => card.id);
 
         const card1 = showingCards.filter(card => card.id === showingCardsIds[0]);
@@ -93,18 +104,23 @@ class MemoryGame extends Component {
             const card2color = card2[0].backgroundColor;
             if (card1color === card2color) {
                 const matchedCards = showingCards.map(card =>
-                    showingCardsIds.includes(card.id) ? { ...card, cardState: 2 } : card
+                    showingCardsIds.includes(card.id) ? { ...card, cardState: CardState.MATCHING } : card
                 );
-                this.setState({ cards: matchedCards, secondClick: false });
+                this.setState({ cards: matchedCards, secondClick: false }, 
+                    () => {
+                        if (this.state.cards.every(card => card.cardState === CardState.MATCHING)) {
+                            this.playSound(correct);
+                        }
+                    });
                 return;
             } else if (card1color !== card2color) {
                 const notMatchedCards = showingCards.map(card =>
-                    showingCardsIds.includes(card.id) ? { ...card, cardState: 0 } : card
+                    showingCardsIds.includes(card.id) ? { ...card, cardState: CardState.HIDING } : card
                 );
                 this.setState({ cards: showingCards }, () =>
                     setTimeout(
                         () => this.setState({ cards: notMatchedCards, secondClick: false }),
-                        300
+                        500
                     )
                 );
                 return;

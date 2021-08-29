@@ -28,33 +28,31 @@
         height: 0;
         border-style: solid;
         border-width: 0 90px 155.9px 90px;
-        border-color: transparent transparent #ffbb33 transparent;
+        border-color: transparent transparent red transparent;
         align-self: center;
         justify-self: center;
 
         &:hover {
             cursor: pointer;
-            border-color: transparent transparent #cc8800 transparent;
         }
     }
 
     .square {
         width: 170px;
         height: 170px;
-        background-color: #ffbb33;
+        background-color: blue;
         align-self: center;
         justify-self: center;
 
         &:hover {
             cursor: pointer;
-            background: #cc8800;
         }
     }
 
     .circle { 
         width: 180px;
         height: 180px;
-        background: #ffbb33; 
+        background: yellow; 
         -moz-border-radius: 90px; 
         -webkit-border-radius: 790px; 
         border-radius: 90px;
@@ -63,20 +61,18 @@
 
         &:hover {
             cursor: pointer;
-            background: #cc8800;
         }
     }
 
     .rectangle {
         width: 180px;
         height: 100px;
-        background: #ffbb33;
+        background: green;
         align-self: center;
         justify-self: center;
 
         &:hover {
             cursor: pointer;
-            background: #cc8800;
         }
     }
 
