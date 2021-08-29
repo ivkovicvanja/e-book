@@ -2,7 +2,7 @@ import React from 'react';
 import './LogicProblemOne.scss';
 import VolumeUpIcon from '@material-ui/icons/VolumeUp';
 
-import description from '../../audio/sabiranje_zadatak1.mp3';
+import description from '../../audio/logika_zadatak1.mp3';
 import correct from '../../audio/tacno.mp3';
 import incorrect from '../../audio/netacno.mp3';
 
