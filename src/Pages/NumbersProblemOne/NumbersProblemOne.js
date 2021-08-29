@@ -12,6 +12,10 @@ function NumbersProblemOne() {
         new Audio(audio).play();
     }
 
+    const handleClick = (event) => {
+      event.target.style.backgroundColor = 'green';
+    }
+
     return (
         <div>
             <p>
@@ -22,7 +26,7 @@ function NumbersProblemOne() {
             </div>
             <div className="answers-numbers">
               <div className="answer incorrect" onClick={() => playSound(incorrect)}>8</div>
-              <div className="answer correct" onClick={() => playSound(correct)}>9</div>
+              <div className="answer correct" onClick={(e) => {playSound(correct); handleClick(e);}}>9</div>
               <div className="answer incorrect" onClick={() => playSound(incorrect)}>3</div>
             </div>
         </div>

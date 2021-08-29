@@ -15,9 +15,8 @@ import nine from '../../audio/devet.mp3';
 function NumbersPage() {
 
     const playSound = (audio) => { 
-        console.log('play sound')
         new Audio(audio).play();
-      }
+    }
 
     return (
         <div>

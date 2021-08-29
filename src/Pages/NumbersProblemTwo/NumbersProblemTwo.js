@@ -10,7 +10,11 @@ function NumbersProblemTwo() {
 
     const playSound = (audio) => { 
         new Audio(audio).play();
-      }
+    }
+
+    const handleClick = (event) => {
+      event.target.style.backgroundColor = 'green';
+    }
 
     return (
         <div>
@@ -21,7 +25,7 @@ function NumbersProblemTwo() {
               КОЈИ БРОЈ ЈЕ ПРЕТХОДНИК БРОЈА 4? <span className="hearing-icon"><VolumeUpIcon onClick={() => playSound(description)}/></span>
             </div>
             <div className="answers-numbers">
-            <div className="answer correct" onClick={() => playSound(correct)}>3</div>
+            <div className="answer correct" onClick={(e) => {playSound(correct); handleClick(e)}}>3</div>
             <div className="answer incorrect" onClick={() => playSound(incorrect)}>6</div>
             <div className="answer incorrect" onClick={() => playSound(incorrect)}>5</div>
             </div>

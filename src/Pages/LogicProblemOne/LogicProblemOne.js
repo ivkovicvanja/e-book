@@ -12,18 +12,22 @@ function LogicProblemOne() {
         new Audio(audio).play();
     }
 
+    const handleClick = (event) => {
+        event.target.style.backgroundColor = 'green';
+    }
+
     return (
         <div>
             <p>
               ЛОГИКА - ЗАДАТАК
             </p>
             <div className="description">
-              КЛИКНИ НА ЦРВЕНИ ТРОУГАО. <span className="hearing-icon"><VolumeUpIcon onClick={() => playSound(description)}/></span>
+              КЛИКНИ НА ЖУТИ КРУГ. <span className="hearing-icon"><VolumeUpIcon onClick={() => playSound(description)}/></span>
             </div>
             <div className="answers-logic">
             <div className="square incorrect" onClick={() => playSound(incorrect)}></div>
-            <div className="circle incorrect" onClick={() => playSound(incorrect)}></div>
-            <div className="triangle correct" onClick={() => playSound(correct)}></div>
+            <div className="circle correct" onClick={(e) => { playSound(correct); handleClick(e); }}></div>
+            <div className="triangle incorrect" onClick={() => { playSound(incorrect);}}></div>
             </div>
         </div>
       );

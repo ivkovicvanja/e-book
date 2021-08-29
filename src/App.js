@@ -23,6 +23,7 @@ import SubtractionProblemTwo from './Pages/SubtractionProblemTwo/SubtractionProb
 import SecondaryColorsPage from './Pages/SecondaryColorsPage/SecondaryColorsPage';
 import GeometricShapes from './Pages/GeometricShapes/GeometricShapes';
 import LogicProblemOne from './Pages/LogicProblemOne/LogicProblemOne';
+import MemoryGame from './Pages/MemoryGame/MemoryGame';
 
 function App() {
 
@@ -85,7 +86,7 @@ function App() {
       case 20:
         return <LogicProblemOne />
       case 21:
-        return <HomePage />
+        return <MemoryGame />
       default:
         return <HomePage />;
     }
@@ -125,6 +126,7 @@ function App() {
               <span onClick={() => setPage(18)}>Боје - изведене боје</span>
               <span onClick={() => setPage(19)}>Геометријски облици</span>
               <span onClick={() => setPage(20)}>Логика - задатак</span>
+              <span onClick={() => setPage(21)}>Игра меморије</span>
             </div>
           </div>
         </div>

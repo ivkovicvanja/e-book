@@ -1,0 +1,44 @@
+.title {
+    font-size: large;
+    color: azure;
+    margin-bottom: 20px
+}
+
+.game {
+    display: block;
+    min-width: 600px;
+}
+
+.card {
+    flex-basis: calc(25% - 20px);
+    height: 80px;
+    border: 5px solid #584f47;
+    border-radius: 5px;
+    margin: 5px 0;
+    cursor: pointer;
+    background-color: lightgrey;
+    transition: 0.3s background-color linear;
+}
+
+.cards-block {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: space-around;
+    padding: 0 10px 10px 10px;
+    max-width: 800px;
+}
+
+.button-new-game {
+    width: 200px;
+    height: 80px;
+    color: rgb(4, 5, 39);
+    background-color: #ffbb33;
+    font-size: larger;
+    font-weight: 300;
+
+    &:hover {
+        background-color: #cc8800;
+        cursor: pointer;
+    }
+}

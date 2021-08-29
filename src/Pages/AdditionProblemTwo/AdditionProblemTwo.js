@@ -12,6 +12,10 @@ function AdditionProblemTwo() {
         new Audio(audio).play();
     }
 
+    const handleClick = (event) => {
+      event.target.style.backgroundColor = 'green';
+    }
+
     return (
         <div>
             <p>
@@ -23,7 +27,7 @@ function AdditionProblemTwo() {
             <div className="answers-addition">
             <div className="answer incorrect" onClick={() => playSound(incorrect)}>2 + 3</div>
             <div className="answer incorrect" onClick={() => playSound(incorrect)}>3 + 5</div>
-            <div className="answer correct" onClick={() => playSound(correct)}>6 + 1</div>
+            <div className="answer correct" onClick={(e) => {playSound(correct); handleClick(e);}}>6 + 1</div>
             </div>
         </div>
       );
