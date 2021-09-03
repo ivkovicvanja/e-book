@@ -2,7 +2,10 @@ body {
   margin: 0;
   padding: 0;
 
-  overflow-y: hidden; /* Hide vertical scrollbar */
+  // overflow-y: hidden; /* Hide vertical scrollbar */
   overflow-x: hidden; /* Hide horizontal scrollbar */
+  background: rgb(0, 12, 82);
+  background: linear-gradient(90deg, rgba(0, 12, 82, 1) 0%, rgba(34, 170, 255, 1) 100%);
+  opacity: 0.8;
 }
 

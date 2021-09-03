@@ -24,11 +24,12 @@ import SecondaryColorsPage from './Pages/SecondaryColorsPage/SecondaryColorsPage
 import GeometricShapes from './Pages/GeometricShapes/GeometricShapes';
 import LogicProblemOne from './Pages/LogicProblemOne/LogicProblemOne';
 import MemoryGame from './Pages/MemoryGame/MemoryGame';
+import TestPage from './Pages/TestPage/TestPage';
 
 function App() {
 
   const minPage = 1;
-  const maxPage = 21;
+  const maxPage = 22;
 
   const [page, setPage] = useState(1);
 
@@ -87,6 +88,8 @@ function App() {
         return <LogicProblemOne />
       case 21:
         return <MemoryGame />
+      case 22:
+        return <TestPage />
       default:
         return <HomePage />;
     }
@@ -98,7 +101,7 @@ function App() {
   }
 
   return (
-    <div className="wrapper">
+    <div>
 
       <header>
 
@@ -127,6 +130,7 @@ function App() {
               <span onClick={() => setPage(19)}>Геометријски облици</span>
               <span onClick={() => setPage(20)}>Логика - задатак</span>
               <span onClick={() => setPage(21)}>Игра меморије</span>
+              <span onClick={() => setPage(22)}>Тест</span>
             </div>
           </div>
         </div>
