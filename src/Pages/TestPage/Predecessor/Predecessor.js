@@ -82,7 +82,7 @@ class Predecessor extends Component {
         return (
             <div>
                 <div className="title">
-                    Задатак 3 - Кликни на број смајлића једнак следбенику броја датих смајлића: 
+                    Задатак 3 - Обележи смајлиће тако да број обележених буде једнак следбенику броја датих смајлића
                 </div>
                 <div className="predecessor">
                     <span className="emoji">{this.displayEmoji(firstNumber)}</span>  {`=>`}  <span className="answers-emoji">{this.displayEmojiAnswer(9)}</span>
