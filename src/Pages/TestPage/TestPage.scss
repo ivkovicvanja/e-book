@@ -8,6 +8,27 @@
     width: 1200px;
     padding-top: 30px;
     border-top: 1px solid azure;
+    margin-bottom: 30px;
+}
+
+.message {
+    color: azure;
+    font-size: x-large;
+    margin: 30px;
+}
+
+.button-show-results {
+    width: 160px;
+    height: 60px;
+    color: rgb(4, 5, 39);
+    background-color: #ffbb33;
+    font-size: larger;
+    font-weight: 300;
+
+    &:hover {
+        background-color: #cc8800;
+        cursor: pointer;
+    }
 }
 
 .addition {
@@ -124,6 +145,82 @@
                 &:active {
                     pointer-events: none;
                 }
+            }
+        }
+    }
+}
+
+.shapes {
+    display: inline-flex;
+    align-items: center;
+    font-size: xx-large;
+    color: azure;
+
+    img {
+        width: 300px;
+    }
+
+    .answers-shapes {
+        margin: 10px;
+        width: auto;
+        display: grid;
+        grid-template-rows: 50px;
+        grid-template-columns: 70px 70px 70px;
+        justify-content: space-evenly;
+
+        .answer-shapes {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgb(4, 5, 39);
+            font-size: 30px;
+            background-color: #ffbb33;
+            max-width: 70px;
+            border: 1px solid azure;
+            padding: 20px;
+            margin: 10px;
+
+            &:hover {
+                background-color: #cc8800;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.flags {
+    display: inline-flex;
+    align-items: center;
+    font-size: xx-large;
+    color: azure;
+
+    img {
+        width: 300px;
+    }
+
+    .answers-flags {
+        margin: 10px;
+        width: auto;
+        display: grid;
+        grid-template-rows: 50px;
+        grid-template-columns: 70px 70px 70px;
+        justify-content: space-evenly;
+
+        .answer-flags {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgb(4, 5, 39);
+            font-size: 30px;
+            background-color: #ffbb33;
+            max-width: 70px;
+            border: 1px solid azure;
+            padding: 20px;
+            margin: 10px;
+
+            &:hover {
+                background-color: #cc8800;
+                cursor: pointer;
             }
         }
     }

@@ -4,6 +4,8 @@ import './TestPage.scss';
 import Addition from './Addition/Addition';
 import Subtraction from './Subtraction/Subtraction';
 import Predecessor from './Predecessor/Predecessor';
+import Shapes from './Shapes/Shapes';
+import Flags from './Flags/Flags';
 
 class TestPage extends Component {
 
@@ -15,7 +17,9 @@ class TestPage extends Component {
             counter: 0,
             problemOne: false,
             problemTwo: false,
-            problemThree: false
+            problemThree: false,
+            problemFour: false,
+            problemFive: false
         };
 
         this.checkAnswers = this.checkAnswers.bind(this);
@@ -31,7 +35,7 @@ class TestPage extends Component {
 
     checkAnswers() {
         this.setState({
-            message: 'Одговорио си тачно на ' + this.state.counter + '/3 питања.'
+            message: 'Одговорио си тачно на ' + this.state.counter + '/5 питања.'
         });
     }
 
@@ -96,6 +100,42 @@ class TestPage extends Component {
         }
     }
 
+    eventHandlerFour = data => {
+        if (this.state.problemFour !== data.selectedAnswer.correct) {
+            this.setState({
+                problemFour: data.selectedAnswer.correct
+            });
+            if (data.selectedAnswer.correct) {
+                this.setState({
+                    counter: this.state.counter + 1 
+                })
+            }
+            else {
+                this.setState({
+                    counter: this.state.counter - 1 
+                })
+            }
+        }
+    }
+
+    eventHandlerFive = data => {
+        if (this.state.problemFive !== data.selectedAnswer.correct) {
+            this.setState({
+                problemFive: data.selectedAnswer.correct
+            });
+            if (data.selectedAnswer.correct) {
+                this.setState({
+                    counter: this.state.counter + 1 
+                })
+            }
+            else {
+                this.setState({
+                    counter: this.state.counter - 1 
+                })
+            }
+        }
+    }
+
     render() {
         return (
             <div>
@@ -111,13 +151,17 @@ class TestPage extends Component {
             <div className="problem">
                 <Predecessor onChange={this.eventHandlerThree}/>
             </div>
-
+            <div className="problem">
+                <Shapes onChange={this.eventHandlerFour}/>
+            </div>
+            <div className="problem">
+                <Flags onChange={this.eventHandlerFive}/>
+            </div>
             <div>
-                <button type="button" className="button-new-game" onClick={this.checkAnswers}>
+                <button type="button" className="button-show-results" onClick={this.checkAnswers}>
                     ПРОВЕРИ ОДГОВОРЕ
                 </button>                
-                <div>{this.state.message}</div>
-
+                <div className="message">{this.state.message}</div>
             </div>
         </div>
         );
