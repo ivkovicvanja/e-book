@@ -92,7 +92,7 @@ class Flags extends Component {
                     Задатак 5 - Колико примарних боја се налази на застави {problemText[problemNumber]}?
                 </div>
                 <div className="flags">
-                    <img alt="oblici" className="image" src={randomImages[problemNumber]}></img>
+                    <img alt="zastave" className="image" src={randomImages[problemNumber]}></img>
       
                     <span className="answers-flags">
                     {this.getAnswers()}
