@@ -69,9 +69,16 @@ class Predecessor extends Component {
     }
 
     handleClick(event) {
-        if (event.target.style[0] == undefined) {
+        if (event.target.children[0].style.color == '') {
             event.target.children[0].style.color = 'brown';
-            event.target.style.pointerEvents = 'none';
+            this.setState({ counter: this.state.counter + 1 }, () => this.props.onChange(this.state));   
+        }
+        else if (event.target.children[0].style.color == 'brown') {
+            event.target.children[0].style.color = 'orangered';
+            this.setState({ counter: this.state.counter - 1 }, () => this.props.onChange(this.state));   
+        }
+        else if (event.target.children[0].style.color == 'orangered') {
+            event.target.children[0].style.color = 'brown';
             this.setState({ counter: this.state.counter + 1 }, () => this.props.onChange(this.state));   
         }
     }
@@ -81,6 +88,7 @@ class Predecessor extends Component {
 
         return (
             <div>
+                {this.state.counter}
                 <div className="title">
                     Задатак 3 - Обележи смајлиће тако да број обележених буде једнак следбенику броја датих смајлића
                 </div>
