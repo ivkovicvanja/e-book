@@ -88,7 +88,6 @@ class Predecessor extends Component {
 
         return (
             <div>
-                {this.state.counter}
                 <div className="title">
                     Задатак 3 - Обележи смајлиће тако да број обележених буде једнак следбенику броја датих смајлића
                 </div>
