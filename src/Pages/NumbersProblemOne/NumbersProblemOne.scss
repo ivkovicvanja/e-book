@@ -1,22 +1,24 @@
-.answers {
+.answers-numbers {
     margin: 10px;
     width: auto;
     display: grid;
     grid-template-rows: 100px;
     grid-template-columns: 300px 300px 300px;
+    justify-content: space-evenly;
 
     .answer {
         display: flex;
         align-items: center;
         justify-content: center;
-        color: azure;
+        color: rgb(4, 5, 39);
         font-size: 30px;
-        background-color: rgb(199, 91, 115);
+        background-color: #ffbb33;
         max-width: 200px;
         border: 1px solid azure;
+        padding: 20px;
 
         &:hover {
-            background-color: rgb(114, 52, 65);
+            background-color: #cc8800;
             cursor: pointer;
         }
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import './AdditionProblemOne.scss';
-import HearingIcon from '@material-ui/icons/Hearing';
+import VolumeUpIcon from '@material-ui/icons/VolumeUp';
 
 import description from '../../audio/sabiranje_zadatak1.mp3';
 import correct from '../../audio/tacno.mp3';
@@ -12,16 +12,20 @@ function AdditionProblemOne() {
         new Audio(audio).play();
     }
 
+    const handleClick = (event) => {
+      event.target.style.backgroundColor = 'green';
+    }
+
     return (
         <div>
             <p>
               САБИРАЊЕ - ЗАДАТАК 1
             </p>
             <div className="description">
-              У АУТОБУСУ СЕ НАЛАЗИЛО ПЕТ (5) ПУТНИКА. НА СТАНИЦИ ЈЕ УШЛО ЈОШ ТРОЈЕ (3). КОЛИКО ПУТНИКА САДА ИМА У АУТОБУСУ? <span className="hearing-icon"><HearingIcon onClick={() => playSound(description)}/></span>
+              У АУТОБУСУ СЕ НАЛАЗИЛО ПЕТ (5) ПУТНИКА. НА СТАНИЦИ ЈЕ УШЛО ЈОШ ТРОЈЕ (3). КОЛИКО ПУТНИКА САДА ИМА У АУТОБУСУ? <span className="hearing-icon"><VolumeUpIcon onClick={() => playSound(description)}/></span>
             </div>
-            <div className="answers">
-            <div className="answer correct" onClick={() => playSound(correct)}>8</div>
+            <div className="answers-addition">
+            <div className="answer correct" onClick={(e) => {playSound(correct); handleClick(e)}}>8</div>
             <div className="answer incorrect" onClick={() => playSound(incorrect)}>6</div>
             <div className="answer incorrect" onClick={() => playSound(incorrect)}>9</div>
             </div>

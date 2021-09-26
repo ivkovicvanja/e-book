@@ -1,0 +1,61 @@
+.description {
+    font-size: x-large;
+    color: azure;
+    margin: 40px;
+    max-width: 900px;
+}
+
+.hearing-icon {
+    margin: 20px;
+    color: #ffbb33;
+
+    &:hover {
+        cursor: pointer;
+        color: #cc8800;
+    }
+}
+
+.answers-colors {
+    margin: 10px;
+    width: auto;
+    display: grid;
+    grid-template-rows: 100px;
+    grid-template-columns: 300px 300px 300px;
+    justify-content: space-evenly;
+
+    .answer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgb(4, 5, 39);
+        font-weight: 300;
+        font-size: 30px;
+        height: 150px;
+        border: 1px solid azure;
+        padding: 20px;
+
+        &.yellow {
+            background-color: yellow;
+            cursor: pointer;
+            &:hover {
+                background-color: yellow;
+            }
+        }
+
+        &.red {
+            background-color: red;
+            cursor: pointer;
+            &:hover {
+                background-color: red;
+            }
+        }
+        
+        &.blue {
+            background-color: blue;
+            cursor: pointer;
+            &:hover {
+                background-color: blue;
+            }
+        }
+      }
+}

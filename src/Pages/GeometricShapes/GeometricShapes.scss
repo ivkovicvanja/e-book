@@ -1,0 +1,84 @@
+.description {
+    font-size: x-large;
+    color: azure;
+    margin: 40px;
+    max-width: 900px;
+}
+
+.hearing-icon {
+    margin: 20px;
+    color: #ffbb33;
+
+    &:hover {
+        cursor: pointer;
+        color: #cc8800;
+    }
+}
+
+.answers-shapes {
+    margin: 10px;
+    width: auto;
+    display: grid;
+    grid-template-rows: 200px 100px;
+    grid-template-columns: 200px 200px 200px 200px;
+    justify-content: space-evenly;
+
+    .triangle {
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 90px 155.9px 90px;
+        border-color: transparent transparent red transparent;
+        align-self: center;
+        justify-self: center;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .square {
+        width: 170px;
+        height: 170px;
+        background-color: blue;
+        align-self: center;
+        justify-self: center;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .circle { 
+        width: 180px;
+        height: 180px;
+        background: yellow; 
+        -moz-border-radius: 90px; 
+        -webkit-border-radius: 790px; 
+        border-radius: 90px;
+        align-self: center;
+        justify-self: center;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .rectangle {
+        width: 180px;
+        height: 100px;
+        background: green;
+        align-self: center;
+        justify-self: center;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .shape-name {
+        font-size: larger;
+        color: azure;
+    }
+
+}
